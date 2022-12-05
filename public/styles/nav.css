@@ -2,10 +2,30 @@ nav {
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  viewport-fit: full-width;
+  width: 100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-span {
+.title {
   font-family: 'Bungee', cursive;
-  margin: 1.5em;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-tweet {
+  justify-content: center;
+}
+
+i {
+  color: red;
+  justify-content: center;
 }
