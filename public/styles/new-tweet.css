@@ -1,27 +1,13 @@
 .new-tweet {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  flex-direction: column;
-  width: 90vw;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 90%;
+  width: 100%;
+  margin: auto;
 }
 
 textarea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 90%;
+  width: 100%;
   height: auto;  
   resize: none;
+  outline: none;
   background-color: transparent;
   border-top-color: transparent;
   border-left-color: transparent;
@@ -30,23 +16,14 @@ textarea {
   border-bottom-width: thick;
 }
 
-label {
+.tweet-footer {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  margin: 15px;
 }
 
 button {
-  font-family: 'Bungee', cursive;
   color: white;
   background-color: #4056A1;
-  justify-content: space-between;
-  align-items: start;
-  margin: 15px;
-}
-
-output.counter {
-  font-family: 'Bungee', cursive;
-  justify-content: space-between;
-  align-items: end;
-  margin: 15px;
 }
