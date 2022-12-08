@@ -69,7 +69,8 @@ const renderTweets = function (tweets) {
   // calls createTweetElement for each tweet    
     const $newTweet = createTweetElement(tweet);
   // takes return value and appends it to the tweets container
-  $('.list-of-tweets').append($newTweet); 
+  // change .append to .prepend, so tweets show up in chronological order
+  $('.list-of-tweets').prepend($newTweet);  
   }
 };
 
@@ -110,9 +111,9 @@ const createTweetBody = function(content) {
 const createTweetFooter = function(object) {
   let $footer = $(`<footer>`);
 
-  let $footerTime = $(`<div class="days-posted">${object.created_at}</div>`);
+  let $footerTime = $(`<div class="days-posted">${timeago.format(object.created_at)}</div>`);
   let $footerIcons = $(`<div class="icons"><i class="fa-solid fa-flag"></i><i class="fa-sharp fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div>`);
-   
+  
   $footer.append($footerTime, $footerIcons);
 
   return $footer;
