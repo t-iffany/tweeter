@@ -64,9 +64,11 @@ footer {
 
 .icons {
   color: #4056A1;
-  margin-left: 6px;
+  width: 6%;
+  display: flex;
+  justify-content: space-between;
 }
 
-i:hover {
+.icons i:hover {
   color: rgb(175, 218, 175);
 }
