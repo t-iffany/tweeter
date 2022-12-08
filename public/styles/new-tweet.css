@@ -16,6 +16,11 @@ textarea {
   border-bottom-width: thick;
 }
 
+.error-msg {
+  border-color: red;
+  color: red;
+}
+
 .tweet-footer {
   display: flex;
   justify-content: space-between;

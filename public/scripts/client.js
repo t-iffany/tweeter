@@ -13,13 +13,11 @@ $(document).ready(() => {
 
     // Validation
     if($("#tweet-text").val().length > 140) {
-      alert("Character limit exceeded");
-      return;
+      return $(".error-msg").append(`<i class="fa-solid fa-triangle-exclamation"></i>  Character limit exceeded  <i class="fa-solid fa-triangle-exclamation"></i>`);
     }
 
     if($("#tweet-text").val().length === 0) {
-      alert("Your tweet is empty");
-      return;  
+      return $(".error-msg").append(`<i class="fa-solid fa-triangle-exclamation"></i>  Your tweet is empty  <i class="fa-solid fa-triangle-exclamation"></i>`);
     }
       
     // Create an AJAX POST request that sends the serialized form data to the server
