@@ -10,14 +10,18 @@ $(document).ready(() => {
   $("form").on("submit", function(event) {
     // Prevent the default form submission behaviour (data submission and page refresh)
     event.preventDefault();  
+    
+    $(".error-msg").slideUp();
 
     // Validation
     if($("#tweet-text").val().length > 140) {
-      return $(".error-msg").append(`<i class="fa-solid fa-triangle-exclamation"></i>  Character limit exceeded  <i class="fa-solid fa-triangle-exclamation"></i>`);
+      $(".error-msg").empty().append(`<i class="fa-solid fa-triangle-exclamation"></i>  Character limit exceeded  <i class="fa-solid fa-triangle-exclamation"></i>`).slideDown("slow");
+      return $(".error-msg").hide().slideDown("slow");
     }
 
     if($("#tweet-text").val().length === 0) {
-      return $(".error-msg").append(`<i class="fa-solid fa-triangle-exclamation"></i>  Your tweet is empty  <i class="fa-solid fa-triangle-exclamation"></i>`);
+      $(".error-msg").empty().append(`<i class="fa-solid fa-triangle-exclamation"></i>  Your tweet is empty  <i class="fa-solid fa-triangle-exclamation"></i>`);
+      return $(".error-msg").hide().slideDown("slow");
     }
       
     // Create an AJAX POST request that sends the serialized form data to the server
