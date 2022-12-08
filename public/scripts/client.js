@@ -27,7 +27,12 @@ $(document).ready(() => {
     $.ajax({
       method: "POST",
       url: "/tweets/",
-      data: $(this).serialize()  // Serialize the form data to send to server as a query string
+      data: $(this).serialize(),  // Serialize the form data to send to server as a query string
+    })
+    .then(function() {  // Refetch tweets on submission without refreshing page
+      loadTweets();
+      $('#tweet-text').val('');  // Reset #tweet-text input field blank
+      $(`.counter`).val(140);  // Reset counter back to 140
     })
   });
 
