@@ -6,8 +6,6 @@
 
 $(document).ready(() => {
 
-  renderTweets(tweetData);
-
   // Use jQuery to add an event listener to handle the form submission
 
   $("form").on("submit", function(event) {
@@ -15,40 +13,53 @@ $(document).ready(() => {
   
     // Create an AJAX POST request that sends the serialized form data to the server
     $.ajax({
-      type: "POST",
+      method: "POST",
       url: "/tweets/",
       data: $(this).serialize()  // Serialize the form data to send to server as a query string
     })
-  
   });
+
+  // Implement function that will use jQuery to make a request to /tweets and receive the array of tweets as JSON
+  const loadTweets = function() {
+    $.ajax({
+      method: "GET",
+      url: "/tweets",
+      dataType: 'JSON',
+    })
+    .then(function(data) {
+      renderTweets(data);
+    })
+  }
+
+loadTweets();
   
 }) 
 
 // Fake data taken from initial-tweets.json
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+// const tweetData = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd" },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ]
 
 // Define a function that takes in an array of tweet objects and appends each one to 'list-of-tweets'
 
