@@ -5,7 +5,6 @@
  */
 
 $(document).ready(() => {
-
   // Use jQuery to add an event listener to handle the form submission
 
   $("form").on("submit", function(event) {
@@ -107,6 +106,7 @@ const createTweetElement = function(tweetData) {
 
 
 // Create HTML markup using template literals
+// Function that creates the tweet header
 const createTweetHeader = function(user) {
   let $header = $(`<header>`);
 
@@ -119,12 +119,21 @@ const createTweetHeader = function(user) {
   return $header;
 }
 
+// Prevent XSS with Escaping
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+// Function that creates the tweet content/body
 const createTweetBody = function(content) {
-  let $tweetBody = $(`<content>${content.text}</content>`);
+  let $tweetBody = $(`<content>${escape(content.text)}</content>`);
 
   return $tweetBody;
 }
 
+// Function that creates the tweet footer
 const createTweetFooter = function(object) {
   let $footer = $(`<footer>`);
 
