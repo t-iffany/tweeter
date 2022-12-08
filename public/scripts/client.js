@@ -9,8 +9,20 @@ $(document).ready(() => {
   // Use jQuery to add an event listener to handle the form submission
 
   $("form").on("submit", function(event) {
-    event.preventDefault();  // Prevent the default form submission behaviour (data submission and page refresh)
-  
+    // Prevent the default form submission behaviour (data submission and page refresh)
+    event.preventDefault();  
+
+    // Validation
+    if($("#tweet-text").val().length > 140) {
+      alert("Character limit exceeded");
+      return;
+    }
+
+    if($("#tweet-text").val().length === 0) {
+      alert("Your tweet is empty");
+      return;  
+    }
+      
     // Create an AJAX POST request that sends the serialized form data to the server
     $.ajax({
       method: "POST",
