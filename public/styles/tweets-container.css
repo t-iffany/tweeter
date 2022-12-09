@@ -19,40 +19,27 @@ article.tweet header {
   margin: 15px;
 }
 
-/* .profile-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: baseline;
-} */
-
-
-/* article.tweet img, article.tweet h3, article.tweet h4 {
-  display: inline-block;
-}
-*/
 article.tweet img {
   max-height: 70%;
   max-width: 70%;
 }
 
 article.tweet h3 {
-  /* height: 5em; */
   width: 48%;
-
 }
 
 article.tweet h4 {
   color: rgba(167, 165, 165, 0.414);
   width: 45%;
   text-align: right;
-} 
+}
 
 article.tweet content {
   width: 100%;
   margin: 8px;
   border-bottom: 3px solid black;
   border-width: thick;
-  padding-left: 25px;;
+  padding-left: 25px;
 }
 
 footer {
@@ -71,7 +58,6 @@ footer {
 
 .icons i {
   margin-right: 0.5em;
-
 }
 
 .icons i:hover {
