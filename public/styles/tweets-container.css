@@ -16,22 +16,27 @@ article.tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 15px;
 }
 
 article.tweet img {
   max-height: 70%;
   max-width: 70%;
+  padding-right: 0.5em;
 }
 
 article.tweet h3 {
   width: 48%;
+  font-size: 1.1em;
+  font-weight: lighter;
 }
 
 article.tweet h4 {
-  color: rgba(167, 165, 165, 0.414);
+  color: rgba(99, 132, 181, 0.348);
   width: 45%;
   text-align: right;
+  font-size: 1.1em;
 }
 
 article.tweet content {
@@ -40,6 +45,8 @@ article.tweet content {
   border-bottom: 3px solid black;
   border-width: thick;
   padding-left: 25px;
+  padding-bottom: 1.2em;
+  font-weight: bold;
 }
 
 footer {
@@ -47,6 +54,7 @@ footer {
   justify-content: space-between;
   margin: 25px;
   width: 100%;
+  font-size: 0.9em;
 }
 
 .icons {
