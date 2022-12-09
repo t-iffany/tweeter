@@ -2,18 +2,22 @@ nav {
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  width: 100vw;
+  width: 100%;
   padding-left: 1.5em;
   padding-right: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 @media only screen and (max-width: 1024px) { 
   nav {
-    background-color: transparent;
+    background-color: rgb(207, 239, 207);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    width: 100%;
   }
 }
 
