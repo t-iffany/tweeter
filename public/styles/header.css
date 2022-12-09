@@ -1,9 +1,8 @@
 .main-header {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   align-items: center;
-  justify-content: center;  
-  /* height: 520px; */
+  justify-content: center;
   height: 100%;
   width: 100%;
   background-color: rgb(207, 239, 207);
@@ -16,4 +15,4 @@
   color: white;
   font-weight: bold;
   font-size: 2rem;
-} 
+}
