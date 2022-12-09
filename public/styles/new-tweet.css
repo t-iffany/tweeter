@@ -6,7 +6,7 @@
 
 textarea {
   width: 100%;
-  height: auto;  
+  height: auto;
   resize: none;
   outline: none;
   background-color: transparent;
@@ -16,13 +16,14 @@ textarea {
   border-bottom-color: black;
   border-bottom-width: thick;
   font-weight: bold;
-  margin-top: 2.2rem;;
+  margin-top: 2.2rem;
+  ;
 }
 
 .error-msg {
   display: none;
   border: 3px solid;
-  border-width: thick; 
+  border-width: thick;
   color: red;
   margin-top: 30px;
   padding: 20px;
