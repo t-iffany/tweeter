@@ -1,6 +1,7 @@
 .new-tweet {
   width: 100%;
   margin: auto;
+  display: none;
 }
 
 textarea {
@@ -14,6 +15,8 @@ textarea {
   border-right-color: transparent;
   border-bottom-color: black;
   border-bottom-width: thick;
+  font-weight: bold;
+  margin-top: 2.2rem;;
 }
 
 .error-msg {
@@ -29,7 +32,8 @@ textarea {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
-  margin: 15px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 button {

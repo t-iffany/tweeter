@@ -19,6 +19,7 @@ nav {
 
 .title {
   font-family: 'Bungee', cursive;
+  font-size: 2rem;
 }
 
 .nav-right {
@@ -28,12 +29,21 @@ nav {
   align-items: center;
 }
 
-.nav-quote {
+.nav-right span {
   justify-content: center;
+  font-size: 1.2em;
+}
+
+.nav-quote i {
+  font-weight: bold;
+  color: white;
+  font-style: normal;
 }
 
 nav i {
   color: red;
   justify-content: center;
+  padding-top: 0.5em;
+  font-weight: bold;
 }
 

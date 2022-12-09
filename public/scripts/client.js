@@ -5,8 +5,12 @@
  */
 
 $(document).ready(() => {
-  // Use jQuery to add an event listener to handle the form submission
+  // Hide new-tweet container and slide down when you click the arrow
+  $("nav i").click(function() {
+    $(".new-tweet").slideDown();
+  })
 
+  // Use jQuery to add an event listener to handle the form submission
   $("form").on("submit", function(event) {
     // Prevent the default form submission behaviour (data submission and page refresh)
     event.preventDefault();  

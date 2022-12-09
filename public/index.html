@@ -45,8 +45,8 @@
   <nav>
     <span class="title">tweeter</span>
     <div class="nav-right">
-      <span class="nav-quote">Write a new tweet</span>
-      <div><i class="fa-solid fa-angles-down"></i></div>
+      <span class="nav-quote"><i>Write</i> a new tweet</span>
+      <div><i class="fa-solid fa-angles-down fa-bounce" style="--fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i></div>
     </div>
   </nav>
   <div class="content">
@@ -67,9 +67,9 @@
     <section class="new-tweet">
       <form method="POST" action="/tweets/">
         <div class="error-msg"> </div>
-        <h2>Compose Tweet</h2>
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
+        <!-- <h2>Compose Tweet</h2> -->
+        <!-- <label for="tweet-text">What are you humming about?</label> -->
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="tweet-footer">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
