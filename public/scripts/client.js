@@ -82,6 +82,7 @@ loadTweets();
 // Define a function that takes in an array of tweet objects and appends each one to 'list-of-tweets'
 
 const renderTweets = function (tweets) {
+  $('.list-of-tweets').empty();
   // loops through tweets
   for (let tweet of tweets) {
   // calls createTweetElement for each tweet    
