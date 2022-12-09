@@ -13,7 +13,7 @@ nav {
   z-index: 5;
 }
 
-@media only screen and (max-width: 1024px) { 
+@media only screen and (max-width: 1024px) {
   nav {
     background-color: rgb(207, 239, 207);
     background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
@@ -50,4 +50,3 @@ nav i {
   padding-top: 0.5em;
   font-weight: bold;
 }
-
