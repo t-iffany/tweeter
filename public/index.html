@@ -20,10 +20,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- timeago library-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer">    
-  </script>
+
+  <!-- Timeago library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -46,40 +48,41 @@
     <span class="title">tweeter</span>
     <div class="nav-right">
       <span class="nav-quote"><i>Write</i> a new tweet</span>
-      <div><i class="fa-solid fa-angles-down fa-bounce" style="--fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i></div>
+      <div><i class="fa-solid fa-angles-down fa-bounce"
+          style="--fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>
+      </div>
     </div>
   </nav>
   <div class="content">
-  <!-- Header -->
-  <header class="main-header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <span class="username">Tiffany</span>
-    </div> 
-  </header>
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <!-- Form to submit tweets -->
-    <section class="new-tweet">
-      <form method="POST" action="/tweets/">
-        <div class="error-msg"> </div>
-        <!-- <h2>Compose Tweet</h2> -->
-        <!-- <label for="tweet-text">What are you humming about?</label> -->
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div class="tweet-footer">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <section class="list-of-tweets">
-    </section>
-  </main>
-</div>
+    <!-- Header -->
+    <header class="main-header">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <div>
+        <span class="username">Tiffany</span>
+      </div>
+    </header>
+    <!-- Main container tweet box -->
+    <main class="container">
+      <!-- Form area to submit tweets -->
+      <section class="new-tweet">
+        <form method="POST" action="/tweets/">
+          <!-- Slide-down error msg -->
+          <div class="error-msg"> </div>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <!-- Footer of tweet box -->
+          <div class="tweet-footer">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <!-- List of all tweets -->
+      <section class="list-of-tweets">
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>
