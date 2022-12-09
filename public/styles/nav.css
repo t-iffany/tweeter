@@ -8,7 +8,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
+}
+
+@media only screen and (max-width: 1024px) { 
+  nav {
+    background-color: transparent;
+  }
 }
 
 .title {
@@ -30,3 +36,4 @@ nav i {
   color: red;
   justify-content: center;
 }
+

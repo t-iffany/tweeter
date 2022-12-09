@@ -34,8 +34,32 @@ main.container {
   margin: auto;
  }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px;
-}
+   /* Laptops / Desktops: minimum width of 1024px */
+   @media only screen and (min-width: 1024px) {
+    /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      /* align-items: flex-start; */
+      top: 180px;
+      padding: 1em;
+      position: relative;
+    }
+
+    header.main-header {
+      margin-top: 2em;
+      margin-left: 2em;
+      margin-right: 1em;
+      width: 30%;
+    }  
+
+    main.container {
+      margin-top: 2em;
+      margin-left: 1em;
+      margin-right: 2em;
+      width: 55%;
+    } 
+  }
