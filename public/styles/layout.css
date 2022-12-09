@@ -3,10 +3,14 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -32,32 +36,33 @@ main.container {
   justify-content: center;
   background-color: #f4f1ec;
   margin: auto;
- }
+}
 
-   /* Laptops / Desktops: minimum width of 1024px */
-   @media only screen and (min-width: 1024px) {
-    /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
-  
-    .content {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      padding: 1em;
-      position: relative;
-    }
+/* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+/* Laptops / Desktops: minimum width of 1024px */
 
-    header.main-header {
-      margin-top: 1.5em;
-      margin-left: 2em;
-      margin-right: 1em;
-      width: 30%;
-    }  
+@media only screen and (min-width: 1024px) {
 
-    main.container {
-      margin-top: 1.3em;
-      margin-left: 1em;
-      margin-right: 2em;
-      width: 55%;
-    } 
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+    position: relative;
   }
+
+  header.main-header {
+    margin-top: 1.5em;
+    margin-left: 2em;
+    margin-right: 1em;
+    width: 30%;
+  }
+
+  main.container {
+    margin-top: 1.3em;
+    margin-left: 1em;
+    margin-right: 2em;
+    width: 55%;
+  }
+}
